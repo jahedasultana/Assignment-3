@@ -64,8 +64,8 @@ A RESTful API for managing a library system built with **Express**, **TypeScript
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/git-zahidul-islam/B5-Assignment-3.git
-   cd B5-Assignment-3
+   git clone https://github.com/jahedasultana/Assignment-3.git
+   cd Assignment-3
    ````
 
 2. Install dependencies:
@@ -79,7 +79,7 @@ A RESTful API for managing a library system built with **Express**, **TypeScript
 3. Create a `.env` file in the root with the following variables:
 
    ```env
-   PORT=http://localhost:5000
+   PORT=5000
    MONGO_URL=your_mongodb_connection_string
    ```
 

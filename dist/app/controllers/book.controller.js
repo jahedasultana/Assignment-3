@@ -67,11 +67,11 @@ exports.bookRoutes.get("/", (req, res) => __awaiter(void 0, void 0, void 0, func
 exports.bookRoutes.get("/:bookId", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const bookId = req.params.bookId;
-        const data = yield book_model_1.Book.findById(bookId);
+        const bookData = yield book_model_1.Book.findById(bookId);
         res.status(201).json({
             success: true,
             message: "Book retrieved successfully",
-            data,
+            bookData,
         });
     }
     catch (error) {
@@ -86,14 +86,14 @@ exports.bookRoutes.put("/:bookId", (req, res) => __awaiter(void 0, void 0, void 
     try {
         const bookId = req.params.bookId;
         const updatedBook = req.body;
-        const data = yield book_model_1.Book.findByIdAndUpdate(bookId, updatedBook, {
+        const bookData = yield book_model_1.Book.findByIdAndUpdate(bookId, updatedBook, {
             new: true,
             runValidators: true,
         });
         res.status(201).json({
             success: true,
-            message: "Book updated successfully",
-            data,
+            message: "Book updated successfully.",
+            bookData,
         });
     }
     catch (error) {
